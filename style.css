@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+
+
+
+
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+
+
+
+
+#waveform {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+}
+
+
+
+
+
+.bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    filter: brightness(50%);
+    z-index: 0;
+    animation: bg-beat 0.60606060606s infinite;
+}
+
+.logo {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: calc(50% - 100px);
+    left: calc(50% - 100px);
+    border-radius: 100%;
+    z-index: 10;
+    animation: logo-beat 0.60606060606s infinite;
+}
+
+.cover {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    opacity: 1;
+    transition: opacity 3s ease-in-out;
+}
+
+.start {
+    font-family: "Quicksand", "Times New Roman", serif;
+    font-size: 50px;
+    opacity: 0%;
+    animation: fade 3s ease-in-out forwards;
+}
+
+#audio {
+    position: absolute;
+    z-index: 25;
+}
+
+
+
+
+
+@keyframes fade {
+    0%{opacity: 0;}
+    100%{opacity: 100%;}
+}
+
+@keyframes logo-beat {
+    0%{transform: scale(1);}
+    50%{transform: scale(1.2);}
+    100%{transform: scale(1);}
+}
+
+@keyframes bg-beat {
+    0%{transform: scale(1);}
+    50%{transform: scale(1.05);}
+    100%{transform: scale(1);}
+}
+
+@keyframes text-scroll {
+    0%{transform: translateX(100%);}
+    100%{transform: translateX(-75%);}
+}
+
+
+
+
+
+.song-box{
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    z-index: 2;
+}
+
+.song{
+    font-family: "Quicksand", "Times New Roman", serif;
+    font-size: 40px;
+    color: white;
+    text-shadow: 5px 5px 5px black;
+    font-weight: bold;
+    animation: text-scroll 15s linear infinite;
+}
